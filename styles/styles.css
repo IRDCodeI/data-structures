@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(41, 40, 40);
+}
+
+.navbar{
+    width: 100%;
+}
+
+.navbar-ul{
+    background-color: rgb(59, 58, 58);
+    margin: 20px;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 20px;
+}
+
+.navbar-ul > li {
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 800;
+    font-size: larger;
+}
