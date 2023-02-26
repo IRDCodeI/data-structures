@@ -1,5 +1,22 @@
+:root{
+    --bg-global: #191919;
+    --color-1: #FF785A;
+    --color-2: #FFAA5A;
+    --color-3: #FFD25A;
+    --color-4: #FFF05A;
+}
 body{
-    background-color: rgb(41, 40, 40);
+    background-color: var(--bg-global);
+}
+
+h2{
+    margin: 2px;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 800;
+    font-size: x-large;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .navbar{
@@ -7,7 +24,7 @@ body{
 }
 
 .navbar-ul{
-    background-color: rgb(59, 58, 58);
+    background-color: var(--color-1);
     margin: 20px;
     padding: 20px;
     list-style: none;
@@ -18,9 +35,167 @@ body{
     border-radius: 20px;
 }
 
-.navbar-ul > li {
-    color: #fff;
+.navbar-element{
+    color: #ffffff;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 800;
     font-size: larger;
+    cursor: pointer;
+}
+
+.section-animation{
+    width: 99vw;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-render{
+    width: 95%;
+    height: 95%;
+    background-color: var(--bg-global);
+    border: 1px solid rgba(82, 81, 81, 0);
+    border-radius: 20px;
+}
+
+.section-render > h2 {
+    font-style: italic;
+}
+
+.section-render > h2 > span{
+    font-style: normal;
+}
+
+.section-controls{
+    width: 99vw;
+    height: 10rem;
+}
+
+.section-elements{
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.controls{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-global);
+    border: 1px solid rgba(82, 81, 81, 0);
+    border-radius: 20px;
+}
+
+.controls--flex{
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.control{
+    width: 250px;
+    height: 120px;
+    padding: 10px;
+    background-color: #3d3d3d;
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0px 20px;
+}
+
+.control > label{
+    width: 100%;
+    margin: 2px;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    font-size: large;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.el-index{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    animation: addElement 0.8s ease-in;
+}
+
+.index-content{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: x-large;
+    animation: addElement 0.8s ease-in;
+}
+
+.arrow{
+    width: 80px;
+    height: 80px;
+    animation: addElement 1s ease-in;
+}
+
+.error-msg{
+    color: #ec0000e1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: 900;
+}
+
+input[type=number]{
+    width: 95%;
+    height: 25px;
+    margin: 10px 0px;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    border: 1px solid #fff0;
+    border-radius: 10px;
+}
+
+input[type=number]::-moz-focus-inner{
+    color: #00000031;
+}
+
+.btn{
+    background-color: var(--color-1);
+    width: 90%;
+    height: 30px;
+    border: 1px solid #00000031;
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/*Animaciones*/
+
+@keyframes addElement {
+    from {
+        transform: scale(1);
+        stroke: white;
+    }
+    50% {
+        transform: scale(1.3);
+        stroke: var(--color-3);
+    }
+    to {
+        transform: scale(1);
+        stroke: white;
+    }
+}
+
+@keyframes removeElement {
+    
 }

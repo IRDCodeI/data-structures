@@ -8,21 +8,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
-    <title>Data Structures</title>
+    <link rel="shortcut icon" href="./imgs/data.ico" type="image/x-icon">
+    <title>Data Animations</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <ul class="navbar-ul">
-                <li>Pila</li>
-                <li>Cola</li>
-                <li>Lista Enlazada</li>
-                <li>Árbol</li>
-                <li>Grafos</li>
+                <li class="navbar-element">Pila</li>
+                <li class="navbar-element">Cola</li>
+                <li class="navbar-element">Lista Enlazada</li>
+                <li class="navbar-element">Árbol</li>
+                <li class="navbar-element">Grafos</li>
             </ul>
         </nav>
     </header>
-    <main></main>
-    <script src="./javascript/main.js"></script>
+    <main>
+        <div class="section-animation">
+            <div class="section-render">
+                <h2><span>Estructura de Dato: </span>Pila</h2>
+                <hr>
+                <div class="render">
+                    <div class="section-elements" id="sec-render-elements">
+                        <div class="el-index">
+                            <span class="index-content">1</span>
+                        </div>
+                        <div class="el-conn" id="conn">
+                            <svg class="arrow" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="arrow-style" d="M17 12L7 12M17 12L13 16M17 12L13 8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div hid class="error-msg"><i class="fa-solid fa-circle-exclamation"></i> Insert a number</div>
+                </div>
+            </div>
+        </div>
+        <div class="section-controls">
+            <div class="controls">
+                <div class="controls--flex">
+                    <div class="control">
+                        <label>Pop</label>
+                        <input type="number" placeholder="Insert a number" id="input-data">
+                        <button class="btn btn_pop">Enviar</button>
+                    </div>
+                    <div class="control">
+                        <label>Push</label>
+                        <input type="number" placeholder="Insert a number" id="input-data-push">
+                        <button type="button" class="btn btn_push">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./javascript/main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/5934d1665e.js" crossorigin="anonymous"></script>
 </body>
 </html>
